@@ -8,6 +8,10 @@ import B_adduser from '../views/B_adduser.vue'
 import Login from '../components/Login.vue'
 import Admin from '../App2.vue'
 
+import RDPclass from '../RDPclass/Connect.vue'
+import Show from '../RDPclass/Show.vue'
+import Open_machine from '../RDPclass/Open_machine.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -55,6 +59,22 @@ const routes = [
         path: 'b_adduser',
         name: 'B_adduser',
         component: B_adduser,
+      },
+    ],
+  },
+  {
+    path: '/RDPclass',
+    name: 'RDPclass',
+    component: RDPclass,
+    children: [
+      {
+        path:"show",
+        name:"Show",
+        component: Show,
+      },{
+        path:"open_machine",
+        name:"Open_machine",
+        component: Open_machine,
       },
     ],
   },

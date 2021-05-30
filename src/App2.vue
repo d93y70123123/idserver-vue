@@ -57,6 +57,7 @@
     }),
     methods:{
       logout(){
+        localStorage.clear();
         this.$router.push('/');
       }
     },
